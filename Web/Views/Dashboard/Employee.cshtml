@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Employee";
+    Layout = "~/Views/Layout/_Layout.cshtml";
+}
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <div class="d-flex flex-row align-content-between justify-content-between">
+            <h5 class="m-0 font-weight-bold text-primary">Table</h5>
+            @*<div data-toggle="modal" data-target="#myModal" onclick="ClearScreen();">
+                <button class="btn btn-outline-success btn-circle" data-toggle="tooltip" data-placement="top" data-animation="false" title="Add">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </div>*@
+        </div>
+    </div>
+    <div class="card-body">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header no-bd">
+                            <h5 class="modal-title"><span class="fw-mediumbold">Department</span></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th width="30%">Name</th>
+                                        <th>:</th>
+                                        <td id="Name"> </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Address</th>
+                                        <th width="10%">:</th>
+                                        <td id="Address"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Phone</th>
+                                        <th>:</th>
+                                        <td id="Phone"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Hire Date</th>
+                                        <th>:</th>
+                                        <td id="HireDate"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Hire Time</th>
+                                        <th>:</th>
+                                        <td id="HireTime"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer no-bd">
+                            @*<button type="button" id="add" class="btn btn-outline-success" data-dismiss="modal" onclick="Save();">Insert</button>*@
+                            <button type="button" id="update" class="btn btn-outline-danger" data-dismiss="modal" onclick="Delete();">Delete</button>
+                            <button type="button" class="btn btn-outline-success" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- End Modal -->
+
+        <div class="table-responsive">
+            <table class="table table-bordered" id="Employee" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/Script/EmpScript.js"></script>
+}
+
+
+
